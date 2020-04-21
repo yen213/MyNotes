@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Dialog which asks for confirmation before a Note gets deleted from the database -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/delete_text_view_delete_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:text="@string/string_delete_note"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delete_text_view_delete_dialog"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_button_delete_dialog"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/string_cancel"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@color/grey" />
+
+        <Button
+            android:id="@+id/delete_button_delete_dialog"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/string_delete"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

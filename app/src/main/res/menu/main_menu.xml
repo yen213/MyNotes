@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Options menu for the Main Activity of the app -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/sort_main_menu"
+        android:title="@string/string_sort"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/all_notes_main_menu"
+        android:title="@string/string_all_notes"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/favorites_notes_main_menu"
+        android:title="@string/string_favorites"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/delete_all_notes_main_menu"
+        android:title="@string/string_delete_all"
+        app:showAsAction="never" />
+</menu>

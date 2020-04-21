@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Activity where a Note item can be created or edited -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar_write_activity"
+        layout="@layout/toolbar" />
+
+    <View
+        android:id="@+id/line_write_activity"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar_write_activity"
+        android:layout_marginBottom="20dp"
+        android:background="@color/grey" />
+
+
+    <EditText
+        android:id="@+id/title_write_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_write_activity"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="start"
+        android:hint="@string/string_title"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:textColor="@color/darK_grey"
+        android:textColorHint="@color/darK_grey"
+        android:textSize="32sp" />
+
+    <EditText
+        android:id="@+id/description_write_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_write_activity"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/transparent"
+        android:fontFamily="sans-serif-light"
+        android:gravity="top"
+        android:hint="@string/string_notes"
+        android:importantForAutofill="no"
+        android:inputType="textAutoComplete|textAutoCorrect|textCapSentences|textMultiLine"
+        android:textColor="@color/darK_grey"
+        android:textColorHint="@color/darK_grey"
+        android:textSize="28sp" />
+
+</RelativeLayout>

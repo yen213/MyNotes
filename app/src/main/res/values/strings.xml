@@ -1,0 +1,64 @@
+<resources>
+    <!-- App name -->
+    <string name="app_name">MyNotes</string>
+
+    <!-- Back icon description -->
+    <string name="string_back_icon_description">Back icon on toolbar</string>
+
+    <!-- Save text -->
+    <string name="string_save">Save</string>
+
+    <!-- Favorite icon description -->
+    <string name="string_fav_icon_description">Favorite icon on toolbar</string>
+
+    <!-- Delete text -->
+    <string name="string_delete">Delete</string>
+
+    <!-- Sort text -->
+    <string name="string_sort">Sort</string>
+
+    <!-- Sort text -->
+    <string name="string_favorites">Favorites</string>
+
+    <!-- Delete all text -->
+    <string name="string_delete_all">Delete all notes</string>
+
+    <!-- Title text -->
+    <string name="string_title">Title</string>
+
+    <!-- Notes text -->
+    <string name="string_notes">Notes</string>
+
+    <!-- All notes text -->
+    <string name="string_all_notes">All Notes</string>
+
+    <!-- Sort by text -->
+    <string name="string_sort_by">Sort by</string>
+
+    <!-- Date created text -->
+    <string name="string_date_created">Date created</string>
+
+    <!-- Date modified text -->
+    <string name="string_date_modified">Date modified</string>
+
+    <!-- Order text -->
+    <string name="string_order">Order</string>
+
+    <!-- Ascending text -->
+    <string name="string_asc">Ascending</string>
+
+    <!-- Descending text -->
+    <string name="string_desc">Descending</string>
+
+    <!-- Description text -->
+    <string name="string_description">Description</string>
+
+    <!-- Cancel text -->
+    <string name="string_cancel">Cancel</string>
+
+    <!-- Done text -->
+    <string name="string_done">Done</string>
+
+    <!-- Delete note text -->
+    <string name="string_delete_note">Delete note?</string>
+</resources>

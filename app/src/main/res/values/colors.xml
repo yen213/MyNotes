@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- White color -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- Black color -->
+    <color name="black">#000000</color>
+
+    <!-- Grey color -->
+    <color name="grey">#BFBABA</color>
+
+    <!-- Transparent color -->
+    <color name="transparent">#000000FF</color>
+
+    <!-- Light blue color -->
+    <color name="dark_blue">#1565C0</color>
+
+    <!-- Dark grey color -->
+    <color name="darK_grey">#3C3C3E</color>
+</resources>

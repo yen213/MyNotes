@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Dialog where the query parameters to search for Notes in the database can be set -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/sort_text_view_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_sort_by"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/sort_by_group_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sort_text_view_dialog"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/title_radio_button_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:fontFamily="sans-serif"
+                android:padding="12dp"
+                android:text="@string/string_title"
+                android:textSize="16sp"
+                app:buttonTint="@color/darK_grey" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/created_radio_button_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/string_date_created"
+                android:textSize="16sp"
+                app:buttonTint="@color/darK_grey" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/modified_radio_button_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:padding="12dp"
+                android:text="@string/string_date_modified"
+                android:textSize="16sp"
+                app:buttonTint="@color/darK_grey" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/order_text_view_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sort_by_group_dialog"
+            android:layout_marginTop="12dp"
+            android:text="@string/string_order"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/sort_by_group_dialog"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@id/order_text_view_dialog"
+            android:layout_toRightOf="@id/order_text_view_dialog"
+            android:background="@drawable/dashed_line"
+            android:layerType="software" />
+
+        <RadioGroup
+            android:id="@+id/order_by_group_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_text_view_dialog"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/asc_radio_button_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/string_asc"
+                android:textSize="16sp"
+                app:buttonTint="@color/darK_grey" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/desc_radio_button_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/string_desc"
+                android:textSize="16sp"
+                app:buttonTint="@color/darK_grey" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/dotted_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/order_by_group_dialog"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/dashed_line"
+            android:layerType="software" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dotted_line_2"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_button_dialog"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/string_cancel"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@color/darK_grey" />
+
+            <Button
+                android:id="@+id/done_button_dialog"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/string_done"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

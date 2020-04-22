@@ -63,6 +63,7 @@ public class WriteNote extends AppCompatActivity implements DeleteDialog.DeleteD
             if (mReceivedData.getBooleanExtra(FAVORITE_EXTRA, false)) {
                 mFavoriteImageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),
                         R.drawable.favorite_icon_filled));
+                mFavoriteImageView.setTag(R.drawable.favorite_icon_filled);
             }
             mTitleEditText.setText(mReceivedData.getStringExtra(TITLE_EXTRA));
             mDescriptionEditText.setText(mReceivedData.getStringExtra(DESCRIPTION_EXTRA));
@@ -168,6 +169,7 @@ public class WriteNote extends AppCompatActivity implements DeleteDialog.DeleteD
             mReturnData.putExtra(CREATED_EXTRA, date);
         }
         setResult(RESULT_OK, mReturnData);
+        finish();
     }
 
     /**

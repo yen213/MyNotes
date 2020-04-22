@@ -21,6 +21,8 @@ import io.reactivex.Completable;
  * the UI if needed.
  */
 public class NoteViewModel extends ViewModel {
+    // Member Variables
+    private static final String TAG = NoteViewModel.class.getName();
     private final NoteDataSource mNoteDataSource;
     private MutableLiveData<Integer> mSetQuery = new MutableLiveData<>(QueryType.CREATED_DESC);
     private LiveData<List<Note>> mNotes = Transformations.switchMap(mSetQuery, this::getNotes);
@@ -45,37 +47,37 @@ public class NoteViewModel extends ViewModel {
         switch (query) {
             case QueryType.CREATED_DESC:
                 mNotes = LiveDataReactiveStreams.fromPublisher(mNoteDataSource.getNotesCreatedDesc());
-                Log.d("ViewModel", "getNotes: " + mSetQuery.getValue());
+                Log.d(TAG, "Query: " + mSetQuery.getValue());
                 break;
 
             case QueryType.CREATED_ASC:
                 mNotes = LiveDataReactiveStreams.fromPublisher(mNoteDataSource.getNotesCreatedAsc());
-                Log.d("ViewModel", "getNotes: " + mSetQuery.getValue());
+                Log.d(TAG, "Query: " + mSetQuery.getValue());
                 break;
 
             case QueryType.TITLE_DESC:
                 mNotes = LiveDataReactiveStreams.fromPublisher(mNoteDataSource.getNotesTitleDesc());
-                Log.d("ViewModel", "getNotes: " + mSetQuery.getValue());
+                Log.d(TAG, "Query: " + mSetQuery.getValue());
                 break;
 
             case QueryType.TITLE_ASC:
                 mNotes = LiveDataReactiveStreams.fromPublisher(mNoteDataSource.getNotesTitleAsc());
-                Log.d("ViewModel", "getNotes: " + mSetQuery.getValue());
+                Log.d(TAG, "Query: " + mSetQuery.getValue());
                 break;
 
             case QueryType.MODIFIED_DESC:
                 mNotes = LiveDataReactiveStreams.fromPublisher(mNoteDataSource.getNotesModifiedDesc());
-                Log.d("ViewModel", "getNotes: " + mSetQuery.getValue());
+                Log.d(TAG, "Query: " + mSetQuery.getValue());
                 break;
 
             case QueryType.MODIFIED_ASC:
                 mNotes = LiveDataReactiveStreams.fromPublisher(mNoteDataSource.getNotesModifiedAsc());
-                Log.d("ViewModel", "getNotes: " + mSetQuery.getValue());
+                Log.d(TAG, "Query: " + mSetQuery.getValue());
                 break;
 
             case QueryType.FAVORITE:
                 mNotes = LiveDataReactiveStreams.fromPublisher(mNoteDataSource.getFavorites());
-                Log.d("ViewModel", "getNotes: " + mSetQuery.getValue());
+                Log.d(TAG, "Query: " + mSetQuery.getValue());
                 break;
         }
         return mNotes;
